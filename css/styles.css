@@ -1,0 +1,107 @@
+body {
+    margin: 20px;
+}
+
+header, main {
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+}
+
+.header {
+    padding: 10px;
+}
+
+#header_container {
+    display: flex;
+    margin-bottom: 10px;
+    background-color: #27394e;
+}
+
+.header_child {
+    background-color: #ea584b;
+    margin: 10px;
+    height: 20px;
+}
+
+#logo {
+    flex: 20;
+    margin-right: 20px;
+}
+
+#brand_name {
+    flex: 60;
+    margin-right: 20px;
+}
+
+#search {
+    flex: 20;
+}
+
+#header_container2 {
+    display: block;
+    background-color: #f0763a;
+}  
+
+.header_child2 {
+    background-color: #ffcc5e;
+    height: 20px;
+    margin: 10px;
+}
+
+.section_container {
+    background-color: #44465e;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    flex: 70;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.article {
+    background-color: #1664a4;
+    width: 100%;
+    height: 20px;
+    margin: 10px;
+}
+
+#last_article {
+    background-color: #6399bb;
+    display: block;
+    height: 20px;
+    margin: 10px;
+}
+
+aside {
+    background-color: #f94c47;
+    display: flex;
+    flex-direction: column;
+    flex: 30;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.ad_container {
+    background-color: #ffe380;
+    height: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: black;
+    padding: 20px;
+}
+
+.footer_content {
+    background-color: #e4a434;
+    height: 20px;
+}
