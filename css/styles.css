@@ -1,3 +1,4 @@
+/* General styling */
 body {
     margin: 20px;
 }
@@ -8,10 +9,7 @@ header, main {
     margin-bottom: 20px;
 }
 
-main {
-    display: flex;
-}
-
+/* Header styling */
 .header {
     padding: 10px;
 }
@@ -53,6 +51,11 @@ main {
     margin: 10px;
 }
 
+/* Main section styling */
+main {
+    display: flex;
+}
+
 .section_container {
     background-color: #44465e;
     display: flex;
@@ -80,6 +83,7 @@ main {
     margin: 10px;
 }
 
+/* Aside ads styling */
 aside {
     background-color: #f94c47;
     display: flex;
@@ -96,6 +100,7 @@ aside {
     margin-bottom: 10px;
 }
 
+/* Footer styling */
 footer {
     background-color: black;
     padding: 20px;
@@ -105,3 +110,57 @@ footer {
     background-color: #e4a434;
     height: 20px;
 }
+
+
+/* Responsive design for tablet */
+@media (min-width: 601px) and (max-width: 992px) {
+    main {
+        flex-direction: column;
+        background-color: #fff734;
+    }
+    aside {
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+}    
+
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    #header_container {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    #logo, #brand_name, #search {
+        flex: auto;
+        margin-right: 10px;
+    }
+    main {
+        flex-direction: column;
+        background-color: #ffd939;
+    }
+    .section_container {
+        background-color: #004763;
+    }
+    .container {
+        flex-direction: column;
+    }
+    aside {
+        margin-left: 0px;
+        margin-top: 20px;
+        background-color: #ff784c;
+    }
+    .article {
+        width: auto;
+        background-color: #558991;
+    }
+    #last_article {
+        background-color: #97d4c5;
+    }
+    .ad_container {
+        background-color: #ffab64;
+    }
+    #last_ad {
+        margin-bottom: 0px;
+    }
+}   
