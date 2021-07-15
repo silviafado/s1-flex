@@ -3,31 +3,44 @@ body {
     margin: 20px;
 }
 
-header, main {
+main {
     background-color: black;
     padding: 20px;
     margin-bottom: 20px;
 }
 
+header {
+    background-image: url("../img/header-background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
 /* Header styling */
 .header {
+
     padding: 10px;
 }
 
 #header_container {
     display: flex;
     margin-bottom: 10px;
-    background-color: #27394e;
+    height: 80px;
 }
 
 .header_child {
-    background-color: #ea584b;
     margin: 10px;
-    height: 20px;
+}
+
+#logo_container {
+    flex: 20;
+    display: flex;
+    justify-content: left;
 }
 
 #logo {
-    flex: 20;
     margin-right: 20px;
 }
 
@@ -41,14 +54,21 @@ header, main {
 }
 
 #header_container2 {
-    display: block;
-    background-color: #f0763a;
+    display: flex;
+    background-color: rgb(214, 213, 213);
+    opacity: 0.5;
+    color: red;
+    height: 80px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: serif;
+
 }  
 
 .header_child2 {
-    background-color: #ffcc5e;
-    height: 20px;
-    margin: 10px;
+
 }
 
 /* Main section styling */
