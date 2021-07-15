@@ -35,22 +35,60 @@ header {
 }
 
 #logo_container {
-    flex: 20;
     display: flex;
     justify-content: left;
+    width: 120px;
 }
 
 #logo {
+
+}
+
+#navbar_container {
+    flex: 18;
     margin-right: 20px;
 }
 
-#brand_name {
-    flex: 60;
-    margin-right: 20px;
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none; /* Remove bullets */
+    padding-inline-start: 0px;
 }
 
-#search {
+.navbar_list {
+    display: flex;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    color: #848585;
+}
+
+.nav_icon {
+    height: 15px;
+    display: flex;
+    align-content: center;
+}
+
+.media_icon {
+    height: 15px;
+
+}
+
+.nav_text {
+    margin-left: 10px;
+}
+
+
+
+#media_container {
+    display: flex;
+    flex-direction: column;
     flex: 20;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-right: 80px;
 }
 
 #header_container2 {
