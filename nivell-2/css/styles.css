@@ -26,7 +26,7 @@ header {
 
 #header_container {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     height: 80px;
 }
 
@@ -37,24 +37,32 @@ header {
 #logo_container {
     display: flex;
     justify-content: left;
-    width: 120px;
+    width: 10%;
 }
 
 #logo {
 
 }
 
-#navbar_container {
-    flex: 18;
-    margin-right: 20px;
+#menu_title {
+    display: none;
 }
 
-ul {
+#navbar_container {
+    flex: 40;
+    margin-right: 30px;
+}
+
+#navbar_container ul li ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     list-style-type: none; /* Remove bullets */
     padding-inline-start: 0px;
+}
+
+#navbar_container ul li {
+    list-style-type: none; /* Remove bullets */
 }
 
 .navbar_list {
@@ -63,6 +71,7 @@ ul {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.8em;
     color: #848585;
+    margin-right: 30px;
 }
 
 .nav_icon {
@@ -86,7 +95,7 @@ ul {
     display: flex;
     flex-direction: column;
     flex: 20;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-end;
     padding-right: 80px;
 }
@@ -172,6 +181,17 @@ footer {
 
 /* Responsive design for tablet */
 @media (min-width: 601px) and (max-width: 992px) {
+    #navbar_container{
+        flex: 60;
+        justify-content: space-around;
+    }
+    #media_container {
+        flex: 1;
+        padding-right: 0px;
+    }
+    ul {
+        justify-content: space-evenly;
+    }
     main {
         flex-direction: column;
         background-color: #fff734;
@@ -186,13 +206,70 @@ footer {
 /* Responsive design for mobile */
 @media (max-width: 600px) {
     #header_container {
-        flex-direction: column;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
+        height: 100px;
+        flex-wrap: wrap;
     }
-    #logo, #brand_name, #search {
-        flex: auto;
+    .header_child {
+        margin: 0px;
+    }
+    #logo_container {
+        order: 0;
+        width: 50%;
+    }
+    #logo {
         margin-right: 10px;
+        width: 50px;
     }
+    #navbar_container {
+        order: 2;
+        background-color: white;
+    width: 100%;
+    margin-right: 0px;
+    }
+    #menu_title {
+    display: block;
+    padding-left: 0px;
+    font-size: 0.7em;
+    font-family: fantasy;
+    }
+    ul {
+    padding-inline-start: 0px;
+    }
+      }
+      #navbar_container ul li {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: white;
+          font-size: 2em;
+      }
+      #navbar_container ul li ul li {
+        padding: 10px;
+        border-bottom: solid 1px black;
+        border-top: solid 1px black;
+      }
+      #navbar_container ul li ul {
+        display: none;
+      }
+
+
+      #menu_title:hover + #navbar_container ul li:hover ul {
+        display: flex;
+        flex-direction: column;
+      }
+      #media_container {
+          order: 1;
+          width: 50%;
+          padding-right: 0px;
+          flex: none;
+      }
+      #header_container2 {
+          order: 4;
+      }
+      
+
     main {
         flex-direction: column;
         background-color: #ffd939;
