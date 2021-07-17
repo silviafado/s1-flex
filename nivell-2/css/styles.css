@@ -48,7 +48,7 @@ header {
     margin-right: 30px;
 }
 
-#navbar_container ul li ul {
+#navbar {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -170,15 +170,20 @@ footer {
 
 /* Responsive design for tablet */
 @media (min-width: 601px) and (max-width: 992px) {
+    .header_child {
+        margin: 0px;
+    }
     #navbar_container{
         flex: 60;
         justify-content: space-around;
+        padding-left: 10px;
     }
     #media_container {
         flex: 1;
-        padding-right: 0px;
+        padding-right: 20px;
     }
-    ul {
+    #navbar {
+        display: flex;
         justify-content: space-evenly;
     }
     main {
@@ -228,7 +233,7 @@ footer {
     ul {
         padding-inline-start: 0px;
     }
-    #navbar_container ul li ul {
+    #navbar {
         width: 78%;
         display: flex;
         flex-direction: column;
@@ -244,7 +249,7 @@ footer {
         padding: 10px;
 
     }
-    #navbar_container ul li ul {
+    #navbar {
         display: none;
     }
     .navbar_list {
