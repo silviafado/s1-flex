@@ -1,0 +1,351 @@
+/* General styling */
+body {
+    margin: 20px;
+}
+
+main {
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+header {
+    background-image: url("../img/header-background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+/* Header styling */
+.header {
+    padding: 10px;
+}
+
+#header_container {
+    display: flex;
+    margin-bottom: 30px;
+    height: 80px;
+}
+
+.header_child {
+    margin: 10px;
+}
+
+#logo_container {
+    display: flex;
+    justify-content: left;
+    width: 10%;
+}
+
+/* Navigation bar styling */
+#menu_title {
+    display: none;
+}
+
+#navbar_container {
+    flex: 40;
+    margin-right: 30px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none; /* Remove bullets */
+    padding-inline-start: 0px;
+}
+
+#navbar_container ul li {
+    list-style-type: none; /* Remove bullets */
+}
+
+.navbar_list a {
+    display: flex;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    color: #848585;
+    margin-right: 30px;
+}
+
+.nav_icon {
+    height: 15px;
+    display: flex;
+    align-content: center;
+}
+
+.nav_text {
+    margin-left: 10px;
+}
+
+/* Social media tags styling */
+.media_icon {
+    height: 15px;
+}
+
+#media_container {
+    display: flex;
+    flex-direction: column;
+    flex: 20;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 80px;
+}
+
+/* Header's banner styling */
+#header_container2 {
+    display: flex;
+    background-color: rgb(214, 213, 213);
+    opacity: 0.5;
+    color: red;
+    height: 80px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: serif;
+}  
+
+/* Main section styling */
+main {
+    display: flex;
+}
+
+.section_container {
+    background-color: #44465e;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    flex: 70;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.article {
+    background-color: #1664a4;
+    width: 100%;
+    height: 20px;
+    margin: 10px;
+}
+
+#last_article {
+    background-color: #6399bb;
+    display: block;
+    height: 20px;
+    margin: 10px;
+}
+
+/* Aside ads styling */
+aside {
+    background-color: #f94c47;
+    display: flex;
+    flex-direction: column;
+    flex: 30;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.ad_container {
+    background-color: #ffe380;
+    height: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: black;
+    padding: 20px;
+}
+
+.footer_content {
+    background-color: #e4a434;
+    height: 20px;
+}
+
+/* Hyperlink styling */
+a {
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
+}
+
+
+/* Responsive design for tablet */
+@media (min-width: 601px) and (max-width: 992px) {
+    .header_child {
+        margin: 0px;
+    }
+    #navbar_container{
+        flex: 60;
+        justify-content: space-around;
+        padding-left: 10px;
+    }
+    #media_container {
+        flex: 1;
+        padding-right: 20px;
+    }
+    #navbar {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    main {
+        flex-direction: column;
+        background-color: #fff734;
+    }
+    aside {
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+}    
+
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    #header_container {
+        margin-bottom: 0px;
+        height: 100px;
+        flex-wrap: wrap;
+    }
+    .header_child {
+        margin: 0px;
+    }
+    #logo_container {
+        order: 0;
+        width: 50%;
+    }
+    #logo {
+        margin-right: 10px;
+        width: 50px;
+    }
+    #navbar_container {
+        order: 2;
+        background-color: white;
+        width: 100%;
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+    #menu_title {
+        display: flex;
+        padding-left: 0px;
+        font-size: 0.7em;
+        font-family: fantasy;
+        justify-content: center;
+        align-items: center;
+    }
+    ul {
+        padding-inline-start: 0px;
+    }
+    #navbar {
+        width: 78%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        font-size: 1em;
+        border-bottom: solid 1px black;
+        border-top: solid 1px black;
+        z-index: 1;
+        position: fixed;
+    }
+    #navbar_container ul li ul li {
+        padding: 10px;
+    }
+    #navbar {
+        display: none;
+    }
+    .navbar_list {
+        display: flex;
+        justify-content: center;
+    }
+    #media_container {
+        order: 1;
+        width: 50%;
+        padding-right: 0px;
+        flex: none;
+    }
+    #header_container2 {
+        order: 4;
+    }
+    main {
+        flex-direction: column;
+        background-color: #ffd939;
+    }
+    .section_container {
+        background-color: #004763;
+    }
+    .container {
+        flex-direction: column;
+    }
+    aside {
+        margin-left: 0px;
+        margin-top: 20px;
+        background-color: #ff784c;
+    }
+    .article {
+        width: auto;
+        background-color: #558991;
+    }
+    #last_article {
+        background-color: #97d4c5;
+    }
+    .ad_container {
+        background-color: #ffab64;
+    }
+    #last_ad {
+        margin-bottom: 0px;
+    }
+}  
+
+/* Exercici 5 layout articles */
+.article {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 10px;
+    background-color: #e9e9e9;
+    border: 2px solid #d7d7d7;
+    font-family: "Montserrat",Arial,Helvetica;
+    padding: 5px;
+}
+
+.article_image {
+    font-weight: bold;
+    font-size: 10px;
+    color: #d7d7d7;
+    padding-left: 5px;
+    background-image: url("../img/image_cultura.jpg");
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items:flex-end;
+}
+
+.article_title {
+    background-color: #f94c47;
+    color: #e9e9e9;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0px 0px 5px;
+    height: 14px;
+}
+
+.article_text {
+    color: #3c3c3c;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.text_link {
+    color: #787878;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
