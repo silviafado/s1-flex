@@ -24,12 +24,7 @@ header {
     padding: 10px;
     margin-bottom: 20px;
     grid-area: hd;
-    display: grid;
-    grid-template-columns: 9.5% auto 40.5%;
-    grid-template-rows: 100px 100px;
-    grid-template-areas: 
-    "hd1 hd1 hd1"
-    "hd2 hd2 hd2";
+
 }
 
 /* Header styling */
@@ -39,11 +34,13 @@ header {
 
 #header_container {
     margin-bottom: 30px;
-    grid-area: hd1;
+    grid-area: hd;
     display: grid;
-    grid-template-columns: 9.5% auto 40.5%;
+    grid-template-columns: 9.5% auto 30.5%;
+    grid-template-rows: 100px 100px;
     grid-template-areas: 
-    "logo nav media";
+    "logo nav media"
+    "hd2 hd2 hd2";
 }
 
 .header_child {
@@ -64,7 +61,6 @@ header {
 }
 
 #navbar_container {
-    flex: 40;
     margin-right: 30px;
     grid-area: nav;
 
@@ -126,12 +122,13 @@ header {
     opacity: 0.5;
     color: red;
     height: 80px;
-    margin: 10px;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
     font-family: serif;
     grid-area: hd2;
+    width: auto;
 }  
 
 /* Main section styling */
@@ -156,20 +153,35 @@ main {
 .container {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 43.7% 43.7% 12.6% ;
+    grid-template-rows: auto ;
     grid-template-areas: 
-    "art art"
-    "art art"
+    "art1 art2"
+    "art3 art4"
     "last last";
     grid-area: cont;
 }
 
 .article {
     background-color: #1664a4;
-    width: 100%;
     height: 20px;
     margin: 10px;
     grid-area: art;
+}
+
+#art1 {
+    grid-area: art1;
+}
+
+#art2 {
+    grid-area: art2;
+}
+
+#art3 {
+    grid-area: art3;
+}
+
+#art4 {
+    grid-area: art4;
 }
 
 #last_article {
@@ -183,20 +195,30 @@ main {
 /* Aside ads styling */
 aside {
     background-color: #f94c47;
-    display: flex;
-    flex-direction: column;
-    flex: 30;
+    display: grid;
+    grid-template-rows: 20% 20% 60%;
+    grid-template-columns: 100%;
     margin-left: 20px;
     padding: 20px;
     grid-area: aside;
+    grid-template-areas: 
+    "first_ad"
+    "last_ad";
 }
 
 .ad_container {
     background-color: #ffe380;
-    height: 20px;
     display: block;
     margin-bottom: 10px;
     grid-area: ad;
+}
+
+#first_ad {
+    grid-area: first_ad;
+}
+
+#last_ad {
+    grid-area: last_ad;
 }
 
 /* Footer styling */
@@ -229,13 +251,15 @@ a:hover {
 
 
 /* Responsive design for tablet */
-@media (min-width: 601px) and (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 1050px) {
     .header_child {
         margin: 0px;
     }
+    #header_container {
+        grid-template-columns: 9.5% auto 10%;
+    }
     #navbar_container{
-        flex: 60;
-        justify-content: space-around;
+        margin-right: 0px;
         padding-left: 10px;
     }
     #media_container {
@@ -247,12 +271,20 @@ a:hover {
         justify-content: space-evenly;
     }
     main {
-        flex-direction: column;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "section"
+        "aside";
         background-color: #fff734;
     }
     aside {
         margin-left: 0px;
         margin-top: 20px;
+        grid-template-rows: auto;
+    }
+    .ad_container{
+        height: 20px;
     }
 }    
 
@@ -260,9 +292,14 @@ a:hover {
 /* Responsive design for mobile */
 @media (max-width: 600px) {
     #header_container {
-        margin-bottom: 0px;
-        height: 100px;
-        flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px 100px;
+    grid-template-areas:
+        "logo media"
+        "nav nav"
+        "hd2 hd2";
+    margin-bottom: 20px;
     }
     .header_child {
         margin: 0px;
@@ -316,28 +353,35 @@ a:hover {
         justify-content: center;
     }
     #media_container {
-        order: 1;
-        width: 50%;
         padding-right: 0px;
-        flex: none;
-    }
-    #header_container2 {
-        order: 4;
     }
     main {
-        flex-direction: column;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "section"
+        "aside";
         background-color: #ffd939;
     }
     .section_container {
         background-color: #004763;
     }
     .container {
-        flex-direction: column;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "art1"
+        "art2"
+        "art3"
+        "art4"
+        "last";
     }
     aside {
         margin-left: 0px;
         margin-top: 20px;
         background-color: #ff784c;
+        grid-template-rows: auto;
+
     }
     .article {
         width: auto;
@@ -348,6 +392,7 @@ a:hover {
     }
     .ad_container {
         background-color: #ffab64;
+        height: 30px;
     }
     #last_ad {
         margin-bottom: 0px;
