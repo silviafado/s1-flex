@@ -127,7 +127,6 @@ main {
     grid-template-rows: auto;
     grid-template-areas: 
     "section aside";
-
 }
 
 .section_container {
