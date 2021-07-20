@@ -4,13 +4,7 @@
     max-width: 1200px;
 }
 
-main {
-    background-color: black;
-    padding: 20px;
-    margin-bottom: 20px;
-    grid-area: main;
-}
-
+/* Header styling */
 header {
     background-image: url("../img/header-background.jpg");
     background-size: cover;
@@ -20,7 +14,6 @@ header {
     grid-area: hd;
 }
 
-/* Header styling */
 #header_container {
     margin-bottom: 30px;
     grid-area: hd;
@@ -127,6 +120,10 @@ main {
     grid-template-rows: auto;
     grid-template-areas: 
     "section aside";
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+    grid-area: main;
 }
 
 .section_container {

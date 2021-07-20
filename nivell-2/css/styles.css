@@ -4,12 +4,7 @@
     max-width: 1200px;
 }
 
-main {
-    background-color: black;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
+/* Header styling */
 header {
     background-image: url("../img/header-background.jpg");
     background-size: cover;
@@ -19,7 +14,6 @@ header {
     height: auto;
 }
 
-/* Header styling */
 .header {
     padding: 10px;
 }
@@ -112,6 +106,9 @@ header {
 /* Main section styling */
 main {
     display: flex;
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .section_container {
