@@ -1,13 +1,7 @@
 /* General styling */
-body {
+.body_container {
     margin: 20px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 260px auto 60px;
-    grid-template-areas: 
-    "hd"
-    "main"
-    "foot";
+    max-width: 1200px;
 }
 
 main {
@@ -24,14 +18,9 @@ header {
     padding: 10px;
     margin-bottom: 20px;
     grid-area: hd;
-
 }
 
 /* Header styling */
-.header {
-    padding: 10px;
-}
-
 #header_container {
     margin-bottom: 30px;
     grid-area: hd;
@@ -128,6 +117,7 @@ header {
     font-family: serif;
     grid-area: hd2;
     width: auto;
+    padding: 0px 10px 10px 10px;
 }  
 
 /* Main section styling */
@@ -224,6 +214,8 @@ aside {
 footer {
     background-color: black;
     padding: 20px;
+    margin: 20px;
+    max-width: 1160px;
     grid-area: foot;
 }
 
@@ -244,7 +236,7 @@ a:hover {
 @media not all and (min-resolution:.001dpcm)
 { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
     #logo {
-        width:65px; 
+        width:75px; 
     }
 }}
 
@@ -353,6 +345,9 @@ a:hover {
     }
     #media_container {
         padding-right: 0px;
+    }
+    #header_container2 {
+        font-size: 1.2em;
     }
     main {
         grid-template-columns: 100%;
