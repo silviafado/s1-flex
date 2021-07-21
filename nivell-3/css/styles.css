@@ -2,6 +2,7 @@
 .body_container {
     margin: 20px;
     max-width: 1200px;
+    margin: auto;
 }
 
 /* Header styling */
@@ -210,7 +211,7 @@ aside {
 footer {
     background-color: black;
     padding: 20px;
-    margin: 20px;
+    margin: auto;
     max-width: 1160px;
     grid-area: foot;
 }
@@ -226,6 +227,8 @@ a {
 }
 a:hover {
     cursor: pointer;
+    color: black;
+    transform: scale(1.2);
 }
 
 /* Safari 11+ */
